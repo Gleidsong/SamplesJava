@@ -1,5 +1,3 @@
-import javax.swing.JOptionPane;
-
 
 public class ImprimeNumeros{
 	public static void main(String[] args) {

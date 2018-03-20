@@ -1,10 +1,3 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.GregorianCalendar;
-
-import javax.print.attribute.standard.DateTimeAtCompleted;
-import javax.swing.JOptionPane;
 
 
 public class Conta {
@@ -48,6 +41,13 @@ public class Conta {
 		}	
 	}
 	
+	public void imprimeDadosConta() {
+		System.out.println("Número: " + numero + "\n" + 
+						   "Saldo: " + saldo + "\n" +
+						   "Titular: " + titular + "\n" +
+						   "Data de Abertura da Conta: " + dataAbertura + "\n" );
+		
+	}
 		
 	//Getters and Setters
 	
@@ -67,7 +67,7 @@ public class Conta {
 	
 	//Identificador
 	public int getIdentificador() {
-		return this.identificador;
+		return identificador;
 	}
 	
 	//DataAbertura

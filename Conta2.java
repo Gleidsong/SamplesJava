@@ -1,8 +1,5 @@
-import java.sql.DatabaseMetaData;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
-import javax.swing.JOptionPane;
+import java.text.SimpleDateFormat;
 
 public class Conta2 {
 	String nome;
