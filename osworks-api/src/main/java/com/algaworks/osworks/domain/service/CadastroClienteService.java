@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.algaworks.osworks.domain.exception.NegocioException;
 import com.algaworks.osworks.domain.model.Cliente;
 import com.algaworks.osworks.domain.repository.ClienteRepository;
+
+
 @Service
 public class CadastroClienteService {
 
