@@ -1,26 +1,28 @@
 package com.algaworks.algafood.jpa;
 
+import java.util.List;
+
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
 import com.algaworks.algafood.AlgafoodApiApplication;
-import com.algaworks.algafood.domain.model.Cozinha;
-import com.algaworks.algafood.domain.repository.CozinhaRepository;
+import com.algaworks.algafood.domain.model.Estado;
+import com.algaworks.algafood.domain.repository.EstadoRepository;
 
-public class AtualizaCozinha {
+public class ConsultarEstadoMain {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new SpringApplicationBuilder(AlgafoodApiApplication.class)
 				.web(WebApplicationType.NONE)
 				.run(args);
 		
-		CozinhaRepository cadastroCozinha = applicationContext.getBean(CozinhaRepository.class);
+		EstadoRepository todosEstados = applicationContext.getBean(EstadoRepository.class);
+		List<Estado> estados = todosEstados.listar();
 		
-		Cozinha cozinha = new Cozinha();
-		cozinha.setId(4L);
-		cozinha.setNome("Francesa");
+		for(Estado estado: estados) {
+			System.out.printf("%s \n", estado.getNome());
+		}
 		
-		cadastroCozinha.salvar(cozinha);
 		
 	}
 }
